@@ -1,5 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function FoodItem() {
-  return <div>wefewfew</div>;
+function FoodItem(props) {
+    return <div></div>;
 }
+
+FoodItem.propTypes = {};
+
+export default FoodItem;
