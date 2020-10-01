@@ -1,21 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useStores } from '../../hooks/useStores';
+import React from "react";
+import PropTypes from "prop-types";
+import { useStores } from "../../hooks/useStores";
+import { useObserver } from "mobx-react";
 
 function FoodList() {
     const { items } = useStores().food;
 
-    return (
-        <div>
-            {items.map((item) => (
-                <Item {...item} />
-            ))}
-        </div>
-    );
+    return useObserver(() => <div>{items.join("_")}</div>);
 }
 
-FoodList.propTypes = {
-    items: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+FoodList.propTypes = {};
 
 export default FoodList;

@@ -1,12 +1,11 @@
-import React from 'react';
-import { useLocalStore } from 'mobx-react';
-import crateFoodStore from '../stores/food';
+import React from "react";
+import FoodStore from "../stores/food";
 
 export const storesContext = React.createContext(null);
 
 export const StoresProvider = ({ children }) => {
     const store = {
-        food: useLocalStore(crateFoodStore),
+        food: new FoodStore(),
     };
 
     return (

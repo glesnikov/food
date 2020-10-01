@@ -1,4 +1,8 @@
 {
-  "extends": "airbnb",
-  "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "extends": "airbnb",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "legacyDecorators": true
+        }
+    }
 }

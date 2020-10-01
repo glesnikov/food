@@ -1,8 +1,9 @@
-const createStore = () => {
-    const store = {
-        items: [],
-        addItem: (str) => store.items.push(str),
-    };
-};
+import { action, observable } from "mobx";
 
-export default createStore;
+export default class FoodStore {
+    @observable
+    items = ["qwdwq"];
+
+    @action
+    addItem = (str) => this.items.push(str);
+}
