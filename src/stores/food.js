@@ -1,9 +1,7 @@
 import { action, observable } from 'mobx';
 
 export default class FoodStore {
-    @observable
-    items = ['qwdwq'];
+    items = observable(['qwdwq']);
 
-    @action
-    addItem = (str) => this.items.push(str);
+    addItem = action((str) => this.items.push(str));
 }
